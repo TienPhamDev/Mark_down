@@ -1,6 +1,6 @@
 /* default */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 :root {
   --slate: #151619;
   --slate-900: #1d1f22;
@@ -21,14 +21,14 @@
   /* (font sizing and weight) */
   --roboto-regular-15: 1.5rem;
   --roboto-regular-14: 1.4rem;
-  --roboto-regular-char-spacing:0.2rem;
+  --roboto-regular-char-spacing: 0.2rem;
   --roboto-light: 1.3rem;
 
-  --roboto-slab-regular:1.4rem;
-  --roboto-line-spacing:2.4rem;
+  --roboto-slab-regular: 1.4rem;
+  --roboto-line-spacing: 2.4rem;
 
-  --roboto-mono-regular:1.4rem ; 
-  --font-roboto-moni: "Roboto Mono",sans-serif;
+  --roboto-mono-regular: 1.4rem;
+  --font-roboto-moni: "Roboto Mono", sans-serif;
 }
 * {
   margin: 0;
@@ -44,25 +44,38 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
-h1,h3,h4,h5,h6{
+h1,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
 }
-h1{
+h1 {
   font-size: 3.2rem;
 }
-h2{
+h2 {
   font-weight: 300;
   font-size: 2.8rem;
 }
-h3{
+h3 {
   font-size: 2.4rem;
 }
-h4{
-  font-size: 2.0rem;
+h4 {
+  font-size: 2rem;
 }
-h5{
-  font-size:16rem;
+h5 {
+  font-size: 16rem;
 }
-h6{
+h6 {
   font-size: 14rem;
+}
+
+.menuMyDoc {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: var(--roboto-regular-14);
+  padding: 1.4rem 1.4rem;
+  background-color: var(--slate-800);
 }
