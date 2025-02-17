@@ -52,4 +52,4 @@ document.querySelector("#app").innerHTML = `
     </div>
   </article>
     `;
-loadMyDocuments(document.querySelector(".loadMyDocuments", data));
+loadMyDocuments(document.querySelector(".loadMyDocuments"), data);
