@@ -151,4 +151,23 @@ header > div:last-child {
 
 article {
   background-color: var(--slate-900);
+  padding: 2rem 2rem;
+}
+.loadMyDocuments {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.loadMyDocCssMainDiv {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.loadMyDocCssMainDiv > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loadMyDocCssMainDiv > div:last-child > div:first-child {
+  color: var(--slate-600);
 }
