@@ -149,14 +149,39 @@ header > div:last-child {
   height: 100%;
 }
 
+
+/* side bar */
+
 article {
   background-color: var(--slate-900);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 2rem 2rem;
+  height: 100vh;
+  width: 25rem;
+}
+article > h1{
+  font-size: 1.8rem;
+  color: var(--slate-400);
+  letter-spacing: var(--roboto-regular-char-spacing);
+  margin-top: 2rem;
+}
+.newDocumentBtn{
+  margin: 2rem 0rem;
+  padding: 1rem;
+  color: var(--slate-200);
+  font-size: var(--roboto-regular-15);
+  font-weight: 500;
+  letter-spacing: var(--roboto-regular-char-spacing);
+  border-radius: 0.2rem;
+  background-color: var(--orange);
 }
 .loadMyDocuments {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  flex-grow: 2;
 }
 .loadMyDocCssMainDiv {
   display: flex;
@@ -179,5 +204,4 @@ article {
 }
 .loadMyDocCssMainDiv > div:last-child > div:last-child {
   color: var(--slate-200);
-  letter-spacing: var(--roboto-regular-char-spacing);
 }
