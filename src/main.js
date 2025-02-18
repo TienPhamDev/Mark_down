@@ -50,6 +50,8 @@ document.querySelector("#app").innerHTML = `
     </button>
     <div class="loadMyDocuments">
     </div>
+    <div>
+    </div>
   </article>
     `;
 loadMyDocuments(document.querySelector(".loadMyDocuments"), data);

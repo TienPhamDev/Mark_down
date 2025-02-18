@@ -168,6 +168,16 @@ article {
   align-items: center;
   justify-content: center;
 }
+.loadMyDocCssMainDiv > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
 .loadMyDocCssMainDiv > div:last-child > div:first-child {
-  color: var(--slate-600);
+  color: var(--slate-500);
+  letter-spacing: var(--roboto-regular-char-spacing);
+}
+.loadMyDocCssMainDiv > div:last-child > div:last-child {
+  color: var(--slate-200);
+  letter-spacing: var(--roboto-regular-char-spacing);
 }
