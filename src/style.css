@@ -149,7 +149,6 @@ header > div:last-child {
   height: 100%;
 }
 
-
 /* side bar */
 
 article {
@@ -161,13 +160,13 @@ article {
   height: 100vh;
   width: 25rem;
 }
-article > h1{
+article > h1 {
   font-size: 1.8rem;
   color: var(--slate-400);
   letter-spacing: var(--roboto-regular-char-spacing);
   margin-top: 2rem;
 }
-.newDocumentBtn{
+.newDocumentBtn {
   margin: 2rem 0rem;
   padding: 1rem;
   color: var(--slate-200);
@@ -204,4 +203,30 @@ article > h1{
 }
 .loadMyDocCssMainDiv > div:last-child > div:last-child {
   color: var(--slate-200);
+}
+.darkLightModeDiv {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.spanDarkLightSwitch {
+  width: 4.8rem;
+  height: 2.4rem;
+  padding: 0.2rem;
+  border-radius: 1.5rem;
+  background-color: var(--slate-600);
+
+  position: relative;
+}
+.spanDarkLightSwitch > span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10%;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background-color: var(--slate-200);
+  transition: transform 0.3s;
 }
