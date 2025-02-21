@@ -209,24 +209,23 @@ article > h1 {
   align-items: center;
   gap: 1rem;
 }
-.spanDarkLightSwitch {
-  width: 4.8rem;
+.darkLightBtn {
+  width: 4.4rem;
   height: 2.4rem;
-  padding: 0.2rem;
+
   border-radius: 1.5rem;
   background-color: var(--slate-600);
 
   position: relative;
 }
-.spanDarkLightSwitch > span {
-  display: block;
+.darkLightBtn > span {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 10%;
+
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 50%;
   background-color: var(--slate-200);
-  transition: transform 0.3s;
+  transition: transform ease 0.3s;
 }
