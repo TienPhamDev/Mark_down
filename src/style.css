@@ -209,6 +209,9 @@ article > h1 {
   align-items: center;
   gap: 1rem;
 }
+.darkLightModeDiv > svg:last-child > path {
+  fill: var(--slate-200);
+}
 .darkLightBtn {
   width: 4.4rem;
   height: 2.4rem;
