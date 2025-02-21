@@ -1,16 +1,14 @@
 import "./style.css";
 import data from "./data.json";
 import { loadMyDocuments } from "./loadMyDocuments";
-import javascriptLogo from "./javascript.svg";
-import viteLogo from "/vite.svg";
-import iconMenu from "/icon-menu.svg";
-import logo from "/logo.svg";
+import { menuBtn } from "./menuBtn";
 import { darkLightModeBtn } from "./darkLightModeBtn";
 document.querySelector("#app").innerHTML = `
   <main>
     <header> 
         <button class="menuBtn">
           <svg width="30" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M0 0h30v2H0zM0 8h30v2H0zM0 16h30v2H0z"/></g></svg>
+          <svg class="hidden" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M2.1.686 23.315 21.9l-1.415 1.415L.686 2.1z"/><path d="M.686 21.9 21.9.685l1.415 1.415L2.1 23.314z"/></g></svg>
         </button>
         
         <div>
@@ -60,5 +58,6 @@ document.querySelector("#app").innerHTML = `
     </div>
   </article>
     `;
+menuBtn(document.querySelector(".menuBtn"));
 loadMyDocuments(document.querySelector(".loadMyDocuments"), data);
 darkLightModeBtn(document.querySelector(".darkLightBtn"));
