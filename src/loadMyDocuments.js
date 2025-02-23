@@ -35,5 +35,12 @@ export const loadMyDocuments = (divElement, data) => {
     divMain.appendChild(divLeft);
     divMain.appendChild(divRight);
     divElement.appendChild(divMain);
+
+    divMain.addEventListener("click", () => {
+      const nameDocument = document.querySelector(".nameDocument");
+      const markDownInput = document.querySelector(".markDownInput");
+      nameDocument.value = element.name;
+      markDownInput.value = element.content;
+    });
   });
 };

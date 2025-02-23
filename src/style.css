@@ -96,6 +96,15 @@ header > div:last-child {
   align-items: center;
   padding-right: 0.4rem;
 }
+.nameDocument {
+  border: none;
+  background-color: inherit;
+  color: var(--slate-200);
+}
+.nameDocument:focus {
+  border: none;
+  outline: none;
+}
 .nameDiv {
   display: flex;
   align-items: center;
