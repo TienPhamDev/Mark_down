@@ -1,8 +1,22 @@
 import "./style.css";
-import data from "./data.json";
+
 import { loadMyDocuments } from "./loadMyDocuments";
 import { menuBtn } from "./menuBtn";
 import { darkLightModeBtn } from "./darkLightModeBtn";
+const data = [
+  {
+    createdAt: "04-01-2022",
+    name: "untitled-document.md",
+    content: "",
+  },
+  {
+    createdAt: "04-01-2022",
+    name: "welcome.md",
+    content:
+      "# Welcome to Markdown\n\nMarkdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.\n\n## How to use this?\n\n1. Write markdown in the markdown editor window\n2. See the rendered markdown in the preview window\n\n### Features\n\n- Create headings, paragraphs, links, blockquotes, inline-code, code blocks, and lists\n- Name and save the document to access again later\n- Choose between Light or Dark mode depending on your preference\n\n> This is an example of a blockquote. If you would like to learn more about markdown syntax, you can visit this [markdown cheatsheet](https://www.markdownguide.org/cheat-sheet/).\n\n#### Headings\n\nTo create a heading, add the hash sign (#) before the heading. The number of number signs you use should correspond to the heading level. You'll see in this guide that we've used all six heading levels (not necessarily in the correct way you should use headings!) to illustrate how they should look.\n\n##### Lists\n\nYou can see examples of ordered and unordered lists above.\n\n###### Code Blocks\n\nThis markdown editor allows for inline-code snippets, like this: `<p>I'm inline</p>`. It also allows for larger code blocks like this:\n\n```\n<main>\n  <h1>This is a larger code block</h1>\n</main>\n```",
+  },
+];
+localStorage.setItem("documentsData", JSON.stringify(data));
 document.querySelector("#app").innerHTML = `
   <main>
     <header> 
@@ -14,7 +28,7 @@ document.querySelector("#app").innerHTML = `
         <div>
           <div class="nameDiv">
             <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M13.107 3.393c.167.167.31.393.429.678.119.286.178.548.178.786v10.286c0 .238-.083.44-.25.607a.827.827 0 0 1-.607.25h-12a.827.827 0 0 1-.607-.25.827.827 0 0 1-.25-.607V.857C0 .62.083.417.25.25A.827.827 0 0 1 .857 0h8c.238 0 .5.06.786.179.286.119.512.261.678.428l2.786 2.786ZM9.143 1.214v3.357H12.5c-.06-.172-.125-.294-.196-.366L9.509 1.411c-.072-.072-.194-.137-.366-.197Zm3.428 13.643V5.714H8.857a.827.827 0 0 1-.607-.25.827.827 0 0 1-.25-.607V1.143H1.143v13.714H12.57Z" fill="#FFF"/></svg>
-            <span class="nameDocument">welcome.md</span>
+            <input class="nameDocument" value="welcome.md" />
           </div>
           <div class="saveDeleteDiv">
             <button>
