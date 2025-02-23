@@ -3,6 +3,7 @@ import "./style.css";
 import { loadMyDocuments } from "./loadMyDocuments";
 import { menuBtn } from "./menuBtn";
 import { darkLightModeBtn } from "./darkLightModeBtn";
+import { saveMydocuments } from "./saveMydocuments";
 const data = [
   {
     createdAt: "04-01-2022",
@@ -72,6 +73,10 @@ document.querySelector("#app").innerHTML = `
     </div>
   </article>
     `;
+
+const getData = JSON.parse(localStorage.getItem("documentsData")) || [];
+console.log(getData);
 menuBtn(document.querySelector(".menuBtn"));
-loadMyDocuments(document.querySelector(".loadMyDocuments"), data);
+loadMyDocuments(document.querySelector(".loadMyDocuments"), getData);
+saveMydocuments(document.querySelector(".saveBtn"));
 darkLightModeBtn(document.querySelector(".darkLightBtn"));
