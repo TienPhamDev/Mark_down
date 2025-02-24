@@ -205,12 +205,20 @@ article > h1 {
   letter-spacing: var(--roboto-regular-char-spacing);
   border-radius: 0.2rem;
   background-color: var(--orange);
+  transition: all ease 0.3s;
+}
+.newDocumentBtn:hover {
+  background-color: var(--orange-light);
+  cursor: pointer;
 }
 .loadMyDocuments {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   flex-grow: 2;
+}
+.loadMyDocuments div:hover {
+  cursor: pointer;
 }
 .loadMyDocCssMainDiv {
   display: flex;
