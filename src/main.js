@@ -4,6 +4,7 @@ import { loadMyDocuments } from "./loadMyDocuments";
 import { menuBtn } from "./menuBtn";
 import { darkLightModeBtn } from "./darkLightModeBtn";
 import { saveMydocuments } from "./saveMydocuments";
+import { newMyDocuments } from "./newMyDocuments";
 const data = [
   {
     createdAt: "04-01-2022",
@@ -20,6 +21,7 @@ const data = [
 localStorage.setItem("documentsData", JSON.stringify(data));
 document.querySelector("#app").innerHTML = `
   <main>
+  
     <header> 
         <button class="menuBtn">
           <svg width="30" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M0 0h30v2H0zM0 8h30v2H0zM0 16h30v2H0z"/></g></svg>
@@ -77,6 +79,7 @@ document.querySelector("#app").innerHTML = `
 const getData = JSON.parse(localStorage.getItem("documentsData")) || [];
 console.log(getData);
 menuBtn(document.querySelector(".menuBtn"));
+newMyDocuments(document.querySelector(".newDocumentBtn"));
 loadMyDocuments(document.querySelector(".loadMyDocuments"), getData);
 saveMydocuments(document.querySelector(".saveBtn"));
 darkLightModeBtn(document.querySelector(".darkLightBtn"));
