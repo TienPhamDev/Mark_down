@@ -5,6 +5,7 @@ import { menuBtn } from "./menuBtn";
 import { darkLightModeBtn } from "./darkLightModeBtn";
 import { saveMydocuments } from "./saveMydocuments";
 import { newMyDocuments } from "./newMyDocuments";
+import { deleteMyDocuments } from "./deleteMyDocuments";
 const data = [
   {
     createdAt: "04-01-2022",
@@ -82,4 +83,5 @@ menuBtn(document.querySelector(".menuBtn"));
 newMyDocuments(document.querySelector(".newDocumentBtn"));
 loadMyDocuments(document.querySelector(".loadMyDocuments"), getData);
 saveMydocuments(document.querySelector(".saveBtn"));
+deleteMyDocuments(document.querySelector(".deleteBtn"));
 darkLightModeBtn(document.querySelector(".darkLightBtn"));
