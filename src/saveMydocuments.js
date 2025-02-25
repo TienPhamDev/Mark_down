@@ -7,7 +7,7 @@ export const saveMydocuments = (element) => {
   // set click event for button save
   element.addEventListener("click", () => {
     const nameDocument = document.querySelector(".nameDocument");
-    const markDownInput = document.querySelector(".markDownInput");
+    const markDownInput = document.querySelector(".markDownTextArea");
 
     const findCurrentDocument = localStorageData.find(
       (e) => e.name === nameDocument.value

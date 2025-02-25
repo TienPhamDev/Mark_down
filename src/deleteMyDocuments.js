@@ -11,8 +11,8 @@ export const deleteMyDocuments = (element) => {
 
     // add content to modal
     modalContent.innerHTML = `
-        <h2>Delete this document?</h2>
-            <p>Are you sure you want to delete the <br>'${nameDocument.value}' document and its content? <br> This action cannot be revesred.</p>
+        <h1>Delete this document?</h1>
+        <p>Are you sure you want to delete the <br>'${nameDocument.value}' document and its content? <br> This action cannot be revesred.</p>
         <div class="modal-footer">
             <button id="confirmBtn" class="modal-close btn">Confirm & Delete</button>
         </div>

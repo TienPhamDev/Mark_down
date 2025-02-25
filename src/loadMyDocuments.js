@@ -38,7 +38,7 @@ export const loadMyDocuments = (divElement, data) => {
 
     divMain.addEventListener("click", () => {
       const nameDocument = document.querySelector(".nameDocument");
-      const markDownInput = document.querySelector(".markDownInput");
+      const markDownInput = document.querySelector(".markDownTextArea");
       nameDocument.value = element.name;
       markDownInput.value = element.content;
     });
