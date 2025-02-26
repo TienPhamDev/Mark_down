@@ -5,7 +5,7 @@ export const deleteMyDocuments = (element) => {
     const modal = document.querySelector(".modal");
     const modalContent = document.querySelector(".modal-content");
     const nameDocument = document.querySelector(".nameDocument");
-
+    const markDownInput = document.querySelector(".markDownTextArea");
     //turn on modal
     modal.style.display = "block";
 
@@ -29,6 +29,7 @@ export const deleteMyDocuments = (element) => {
         JSON.stringify(deleteCurrentDocument)
       );
       modal.style.display = "none";
+      window.location.reload();
     });
 
     //turn off modal
