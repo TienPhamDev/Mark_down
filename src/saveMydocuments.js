@@ -1,9 +1,12 @@
 import { currentDate } from "./currentDate";
 export const saveMydocuments = (element) => {
+  if(localStorage.getItem("documentsData") === null) {
+    localStorage.setItem("documentsData", JSON.stringify([]));
+  }
   // get data from local storage
   const localStorageData =
     JSON.parse(localStorage.getItem("documentsData")) || [];
-
+  console.log(localStorageData);
   // set click event for button save
   element.addEventListener("click", () => {
     const nameDocument = document.querySelector(".nameDocument");
@@ -23,6 +26,7 @@ export const saveMydocuments = (element) => {
       });
       //update new input to local storage
       localStorage.setItem("documentsData", JSON.stringify(localStorageData));
+      window.location.reload();
     } else {
       // if change name of the document -> create new document -> add new content to local storage
       let newDocument = {
@@ -33,6 +37,7 @@ export const saveMydocuments = (element) => {
       const updateNewDocument = [...localStorageData, newDocument];
 
       localStorage.setItem("documentsData", JSON.stringify(updateNewDocument));
+      window.location.reload();
     }
   });
 };
