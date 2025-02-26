@@ -53,7 +53,7 @@ document.querySelector("#app").innerHTML = `
       </section>
       <section>
         <form>
-          <textarea class="markDownInput" value="">
+          <textarea class="markDownTextArea" value="">
           </textarea>
         </form>
       </section>
