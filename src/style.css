@@ -41,7 +41,9 @@ html {
 }
 .app {
   position: relative;
-  
+}
+.container {
+  width: 375px;
 }
 .hidden {
   display: none;
@@ -50,9 +52,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: var(--roboto-regular-14);
-  
+
   overflow: hidden;
-  
 }
 h1,
 h3,
@@ -323,8 +324,8 @@ article > h1 {
   color: var(--slate-900);
   font-size: 2rem;
   letter-spacing: var(--roboto-regular-char-spacing);
-}s
-.modal-content > p {
+}
+s .modal-content > p {
   line-height: 1.6;
 }
 .modal-footer {
