@@ -325,7 +325,7 @@ article > h1 {
   font-size: 2rem;
   letter-spacing: var(--roboto-regular-char-spacing);
 }
-s .modal-content > p {
+.modal-content > p {
   line-height: 1.6;
 }
 .modal-footer {
