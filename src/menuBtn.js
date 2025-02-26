@@ -7,7 +7,7 @@ export const menuBtn = (element) => {
     open.classList.toggle("hidden");
     if (open.classList.contains("hidden")) {
       app.firstElementChild.style.transform = "translateX(250px)";
-      
+
       app.lastElementChild.style.transform = "translateX(0px)";
     }
     close.classList.toggle("hidden");
