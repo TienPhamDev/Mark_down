@@ -8,10 +8,7 @@ const markdownToHTML = (markdown) => {
     .replace(/^## (.*$)/gm, "<h2>$1</h2>")
     .replace(/^# (.*$)/gm, "<h1>$1</h1>");
   // Blockquotes
-  markdown = markdown.replace(
-    /^\>\s[A-Z](.*)\.$/gm,
-    "<blockquote>$&</blockquote>"
-  );
+  markdown = markdown.replace(/^\>(.*)$/gm, "<blockquote>$1</blockquote>");
   // convert text Bold and Italic
   markdown = markdown.replace(
     /\*\*\*(.*)\*\*\*/,
