@@ -7,8 +7,14 @@ const markdownToHTML = (markdown) => {
     .replace(/^### (.*$)/gm, "<h3>$1</h3>")
     .replace(/^## (.*$)/gm, "<h2>$1</h2>")
     .replace(/^# (.*$)/gm, "<h1>$1</h1>");
+  //links
+  markdown = markdown.replace();
   // Blockquotes
-  markdown = markdown.replace(/^\>(.*)$/gm, "<blockquote>$1</blockquote>");
+  // markdown = markdown.replace(/^\>(\s\S$)/gm, "<br>");
+  markdown = markdown.replace(
+    /^\>(.*)$/gm,
+    "<blockquote><p>$1</p></blockquote>"
+  );
   // convert text Bold and Italic
   markdown = markdown.replace(
     /\*\*\*(.*)\*\*\*/,
