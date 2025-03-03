@@ -11,25 +11,27 @@ const markdownToHTML = (markdown) => {
     .replace(/^# (.*$)/gm, "<h1>$1</h1>");
   //ordered list
 
-  function orderedList(e) {
-    const listsLines = e.split("\n");
-    let htmlOl = "<ol>";
-    listsLines.forEach((element) => {
-      const match = element.match(/^\d\.\s(.*)/);
-      if (match) {
-        htmlOl += `<li>${match[1]}</li>\n`;
-      }
-    });
-    htmlOl += "</ol>";
-    return htmlOl;
-  }
-  const newlist = listsLines.filter((e) => {
-    return !e.match(/^\d\.\s(.*)/);
-  });
+  // function orderedList(e) {
+  //   const listsLines = e.split("\n");
+  //   let htmlOl = "<ol>";
+  //   listsLines.forEach((element) => {
+  //     const match = element.match(/^\d\.\s(.*)/);
+  //     if (match) {
+  //       htmlOl += `<li>${match[1]}</li>\n`;
+  //     }
+  //   });
+  //   htmlOl += "</ol>";
+  //   return htmlOl;
+  // }
+  // const newlist = listsLines.filter((e) => {
+  //   return !e.match(/^\d\.\s(.*)/);
+  // });
 
-  console.log(newlist);
-  markdown = markdown.replace(/^\d\.\s(.*)/gm, orderedList(markdown));
+  // console.log(newlist);
+  // markdown = markdown.replace(/^\d\.\s(.*)/gm, orderedList(markdown));
 
+  markdown = markdown.replace(/^\d+\.\s+(.+)$/gm, "<li>$1</li>");
+  markdown = markdown.replace(/(<li>.*<\/li>)/g, "<ol>$1</ol>");
   //links
   markdown = markdown.replace(
     /\[(.*)\]\((.*)\)/g,
