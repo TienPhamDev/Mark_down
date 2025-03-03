@@ -1,4 +1,6 @@
 const markdownToHTML = (markdown) => {
+  const listsLines = markdown.split("\n");
+  console.log(listsLines);
   // convert header
   markdown = markdown
     .replace(/^###### (.*$)/gm, "<h6>$1</h6>")
@@ -7,8 +9,32 @@ const markdownToHTML = (markdown) => {
     .replace(/^### (.*$)/gm, "<h3>$1</h3>")
     .replace(/^## (.*$)/gm, "<h2>$1</h2>")
     .replace(/^# (.*$)/gm, "<h1>$1</h1>");
+  //ordered list
+
+  function orderedList(e) {
+    const listsLines = e.split("\n");
+    let htmlOl = "<ol>";
+    listsLines.forEach((element) => {
+      const match = element.match(/^\d\.\s(.*)/);
+      if (match) {
+        htmlOl += `<li>${match[1]}</li>\n`;
+      }
+    });
+    htmlOl += "</ol>";
+    return htmlOl;
+  }
+  const newlist = listsLines.filter((e) => {
+    return !e.match(/^\d\.\s(.*)/);
+  });
+
+  console.log(newlist);
+  markdown = markdown.replace(/^\d\.\s(.*)/gm, orderedList(markdown));
+
   //links
-  markdown = markdown.replace();
+  markdown = markdown.replace(
+    /\[(.*)\]\((.*)\)/g,
+    `<a href="$2" target="_blank">$1</a>`
+  );
   // Blockquotes
   // markdown = markdown.replace(/^\>(\s\S$)/gm, "<br>");
   markdown = markdown.replace(
