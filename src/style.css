@@ -14,6 +14,9 @@
 
   --white: #ffffff;
 
+  --headerBgMarkDownSection:#e4e4e4;
+  --mainBgMarkDown: #ffffff;
+  --mainBgPreview: ##ffffff;
   --mainTextMarkDown:#2b2d31;
   --mainTextPreview: #5a6069;
   /* (orange and light orange) */
@@ -35,6 +38,11 @@
 .darkMode{
   --mainTextMarkDown:#c1c4cb;
   --mainTextPreview: #7c8187;
+
+  --mainBgMarkDown: #151619;
+  --mainBgPreview: #151619;
+
+  --headerBgMarkDownSection:#e4e4e4;
 }
 * {
   margin: 0;
@@ -172,7 +180,7 @@ main {
   flex-direction: column;
 }
 .markDownPreview {
-  background-color: var(--slate-300);
+  background-color: var(--headerBgMarkDownSection);
   padding: 1.4rem 1rem;
 
   display: flex;
@@ -350,6 +358,7 @@ article > h1 {
 }
 /* convertedMarkDown preview markdown*/
 .markDownTextArea {
+  color: var(--mainTextMarkDown);
   padding: 1.6rem;
   outline: none;
   border: none;
@@ -357,7 +366,7 @@ article > h1 {
   height: 100vh;
   overflow: visible;
   resize: none;
-  background-color: var(--slate-100);
+  background-color: var(--mainBgMarkDown);
 }
 .convertedMarkDown {
   padding: 1.6rem;
@@ -367,8 +376,8 @@ article > h1 {
   height: 100%;
   overflow: visible;
   resize: none;
-  background-color: var(--slate-100);
-  color: var(--mainText);
+  background-color: var(--mainBgPreview);
+  color: var(--mainTextPreview);
 }
 .convertedMarkDown > blockquote {
   background-color: var(--slate-300);
