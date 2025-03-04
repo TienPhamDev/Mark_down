@@ -380,9 +380,10 @@ article > h1 {
 .convertedMarkDown li {
   line-height: 1.6;
 }
-.convertedMarkDown pre {
+/* .convertedMarkDown pre {
   display: inline;
-}
-.convertedMarkDown > .codeBlocks {
-  background-color: #151619;
+} */
+.convertedMarkDown > .codeBlock {
+  background-color: var(--slate-300);
+  padding: 2rem;
 }
