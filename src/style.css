@@ -373,3 +373,16 @@ article > h1 {
   letter-spacing: 0.02rem;
   line-height: 2rem;
 }
+.convertedMarkDown > ol,
+.convertedMarkDown > ul {
+  margin-left: 1.8rem;
+}
+.convertedMarkDown li {
+  line-height: 1.6;
+}
+.convertedMarkDown pre {
+  display: inline;
+}
+.convertedMarkDown > .codeBlocks {
+  background-color: #151619;
+}

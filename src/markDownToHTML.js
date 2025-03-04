@@ -10,6 +10,17 @@ export const markDownToHTML = (markdown) => {
     .replace(/^## (.*$)/gm, "<h2>$1</h2>")
     .replace(/^# (.*$)/gm, "<h1>$1</h1>");
   // code block
+  markdown = markdown.replace(/`([^`\n]+)`/g, (match, codeContent) => {
+    // Escape HTML tags to display them as text
+    console.log(match);
+    console.log(codeContent);
+    const escapedContent = codeContent
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+    console.log(escapedContent);
+    return `<code>${escapedContent}</code>`;
+  });
   markdown = markdown.replace(
     /```(?:\w*)\n([\s\S]*?)\n```/g,
     (match, codeContent) => {
@@ -20,13 +31,12 @@ export const markDownToHTML = (markdown) => {
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;");
-
-      return `<pre><code>${escapedContent}</code></pre>`;
+      console.log(escapedContent);
+      return `<pre class='codeBlock'><code>${escapedContent}</code></pre>`;
     }
   );
   // undered list
   markdown = markdown.replace(/(\- .*(?:\n\- .*)*)/g, (match) => {
-    console.log(match);
     const items = match
       .split("\n")
       .map((line) => `<li>${line.substring(2)}</li>`)
