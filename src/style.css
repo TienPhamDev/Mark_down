@@ -14,6 +14,8 @@
 
   --white: #ffffff;
 
+  --mainTextMarkDown:#2b2d31;
+  --mainTextPreview: #5a6069;
   /* (orange and light orange) */
   --orange: #e46643;
   --orange-light: #f39765;
@@ -29,6 +31,10 @@
 
   --roboto-mono-regular: 1.4rem;
   --font-roboto-moni: "Roboto Mono", sans-serif;
+}
+.darkMode{
+  --mainTextMarkDown:#c1c4cb;
+  --mainTextPreview: #7c8187;
 }
 * {
   margin: 0;
@@ -362,6 +368,7 @@ article > h1 {
   overflow: visible;
   resize: none;
   background-color: var(--slate-100);
+  color: var(--mainText);
 }
 .convertedMarkDown > blockquote {
   background-color: var(--slate-300);
