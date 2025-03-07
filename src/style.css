@@ -19,10 +19,10 @@
   --mainBgPreview: ##ffffff;
   --mainTextMarkDown: #2b2d31;
   --mainTextPreview: #5a6069;
+
   --blockQuoteBg: #e4e4e4;
   --codeBlockBg: #e4e4e4;
-
-  --headingColor: #1d1f22;
+  --textColor: #1d1f22;
   /* (orange and light orange) */
   --orange: #e46643;
   --orange-light: #f39765;
@@ -47,10 +47,10 @@
   --mainBgPreview: #151619;
 
   --headerBgMarkDownSection: #1d1f22;
-  --blockQuoteBg: #1d1f22;
-  --codeBlockBg: #1d1f22;
+  --blockQuoteBg: #2b2d31;
+  --codeBlockBg: #2b2d31;
 
-  --headingColor: #f5f5f5;
+  --textColor: #f5f5f5;
 }
 * {
   margin: 0;
@@ -382,13 +382,14 @@ article > h1 {
   border: none;
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   overflow: visible;
   resize: none;
   background-color: var(--mainBgPreview);
   color: var(--mainTextPreview);
 }
 .convertedMarkDown > blockquote {
-  background-color: var(--slate-300);
+  background-color: var(--blockQuoteBg);
   padding: 2.4rem 1.6rem;
   border-radius: 0.4rem;
   border-left: 0.4rem solid var(--orange);
@@ -396,6 +397,7 @@ article > h1 {
   font-size: small;
   letter-spacing: 0.02rem;
   line-height: 2rem;
+  color: var(--textColor);
 }
 .convertedMarkDown > ol,
 .convertedMarkDown > ul {
@@ -408,13 +410,18 @@ article > h1 {
   display: inline;
 } */
 .convertedMarkDown > .codeBlock {
-  background-color: var(--slate-300);
+  background-color: var(--codeBlockBg);
   padding: 2rem;
+  color: var(--textColor);
 }
 .convertedMarkDown > h1,
 .convertedMarkDown > h2,
 .convertedMarkDown > h3,
 .convertedMarkDown > h4,
 .convertedMarkDown > h5 {
-  color: var(--headingColor);
+  color: var(--textColor);
+}
+
+/* screen size */
+@media (min-width: 577px) and (max-width: 768px) {
 }

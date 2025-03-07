@@ -24,8 +24,7 @@ export const markDownToHTML = (markdown) => {
     /```(?:\w*)\n([\s\S]*?)\n```/g,
     (match, codeContent) => {
       // Escape HTML tags to display them as text
-      console.log(match);
-      console.log(codeContent);
+
       const escapedContent = codeContent
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")

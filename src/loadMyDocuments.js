@@ -1,7 +1,7 @@
 import { convertDate } from "./convertDate";
 export const loadMyDocuments = (divElement) => {
   const data = JSON.parse(localStorage.getItem("documentsData")) || []; // get data from local storage
-  
+
   data.map((element) => {
     const divMain = document.createElement("div");
     const divLeft = document.createElement("div");

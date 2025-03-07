@@ -12,6 +12,7 @@ export const previewBtn = (element) => {
       h1Node.textContent = "PREVIEW";
       markDown.classList.toggle("hidden");
       convertedMarkDown.classList.toggle("hidden");
+
       convertedMarkDown.innerHTML = markDownToHTML(markDown.value);
     } else {
       h1Node.textContent = "MARKDOWN";
