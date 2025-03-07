@@ -74,6 +74,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: var(--roboto-regular-14);
+  background-color: var(--mainBgMarkDown);
 }
 h1,
 h3,
@@ -421,7 +422,48 @@ article > h1 {
 .convertedMarkDown > h5 {
   color: var(--textColor);
 }
+.markDownPreviewTablet {
+  justify-content: space-between;
+  padding: 0rem 1.6rem;
+  background-color: var(--headerBgMarkDownSection);
+}
+.markDownPreviewTablet span {
+  color: var(--slate-600);
+  font-size: var(--roboto-regular-15);
+  letter-spacing: var(--roboto-regular-char-spacing);
+  font-weight: 500;
+}
+.markDownPreviewTablet div {
+  padding: 1.6rem 0rem;
+}
+.markDownPreviewTablet div:last-child {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  align-items: center;
+  padding-left: 1.6rem;
+  border-left: #2b2d31 2px solid;
+}
 
 /* screen size */
 @media (min-width: 577px) and (max-width: 768px) {
+  .markDownPreviewTablet {
+    display: flex;
+  }
+  .markDownPreview {
+    display: none;
+  }
+  #markDownEditor {
+    display: flex;
+
+    width: 100%;
+  }
+  #markDownEditor > textarea {
+    width: 50%;
+  }
+  #markDownEditor > div {
+    border-left: #2b2d31 2px solid;
+    width: 50%;
+    display: block;
+  }
 }
