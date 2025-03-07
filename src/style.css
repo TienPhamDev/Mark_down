@@ -141,6 +141,9 @@ header > div:last-child {
   width: 100%;
   color: var(--slate-200);
 }
+.nameDiv > div > span {
+  display: none;
+}
 .menuBtn {
   padding: 1.2rem 1.2rem;
   width: 5.2rem;
@@ -162,6 +165,9 @@ header > div:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.saveBtn > span{
+  display: none;
 }
 .saveDeleteDiv button:first-child {
   padding: 1rem;
@@ -465,5 +471,30 @@ article > h1 {
     border-left: #2b2d31 2px solid;
     width: 50%;
     display: block;
+  }
+  .nameDiv > div > span {
+    display: block;
+  }
+  .saveBtn > span {
+    display: block;
+  }
+  /* .saveDeleteDiv{
+    width: 6.6rem;
+  } */
+   header > div:last-child{
+    width: 100%;
+   }
+   header > div:last-child > .saveDeleteDiv{
+    width: 40%;
+   }
+  .saveBtn{
+    padding: 1.6rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .saveBtn > span{
+    color: var(--slate-200);
   }
 }

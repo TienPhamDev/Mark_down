@@ -11,11 +11,7 @@ export const screenResponsive = (markDownSection, markDownEditor) => {
     );
 
     if (width >= 577 && width <= 768) {
-      // markDownHead.style.display = "none";
-      // markDownEditor.lastElementChild.classList.remove("hidden");
-      // // markDownTablet.style.display = "flex";
 
-      // markDownEditor.style.display = "flex";
       markDownInput.addEventListener("input", (event) => {
         markDownOutput.innerHTML = markDownToHTML(event.target.value);
       });
