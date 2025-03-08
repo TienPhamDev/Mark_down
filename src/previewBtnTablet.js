@@ -9,7 +9,7 @@ export const previewBtnTablet = (element) => {
   // test window screen size
   const width = window.innerWidth;
   const isTablet = width >= 572 && width <= 768 ? true : false;
-
+  
   const onClickBtn = () => {
     open.classList.toggle('hidden');
     close.classList.toggle('hidden');

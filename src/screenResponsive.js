@@ -10,7 +10,7 @@ export const screenResponsive = (markDownSection, markDownEditor) => {
   );
 
   if (width >= 577 && width <= 768) {
-
+    markDownTablet.classList.remove('hidden')
     markDownInput.addEventListener("input", (event) => {
       markDownOutput.innerHTML = markDownToHTML(event.target.value);
     });
