@@ -166,7 +166,7 @@ header > div:last-child {
   justify-content: center;
   align-items: center;
 }
-.saveBtn > span{
+.saveBtn > span {
   display: none;
 }
 .saveDeleteDiv button:first-child {
@@ -481,20 +481,28 @@ article > h1 {
   /* .saveDeleteDiv{
     width: 6.6rem;
   } */
-   header > div:last-child{
+  header > div:last-child {
     width: 100%;
-   }
-   header > div:last-child > .saveDeleteDiv{
+  }
+  header > div:last-child > .saveDeleteDiv {
     width: 40%;
-   }
-  .saveBtn{
+  }
+  .nameDiv > div:last-child {
+    display: flex;
+    flex-direction: column;
+  }
+  .nameDiv > div:last-child > span {
+    font-size: 1.4rem;
+    color: var(--slate-400);
+  }
+  .saveBtn {
     padding: 1.6rem;
     gap: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .saveBtn > span{
+  .saveBtn > span {
     color: var(--slate-200);
   }
 }

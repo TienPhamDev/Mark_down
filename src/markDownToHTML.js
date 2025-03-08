@@ -54,7 +54,7 @@ export const markDownToHTML = (markdown) => {
     `<a href="$2" target="_blank">$1</a>`
   );
   // Blockquotes
-  // markdown = markdown.replace(/^\>(\s\S$)/gm, "<br>");
+
   markdown = markdown.replace(
     /^\>(.*)$/gm,
     "<blockquote><p>$1</p></blockquote>"

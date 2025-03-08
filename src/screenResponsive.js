@@ -1,20 +1,17 @@
 import { markDownToHTML } from "./markDownToHTML";
 export const screenResponsive = (markDownSection, markDownEditor) => {
-  window.addEventListener("resize", function () {
-    const width = window.innerWidth;
-    
-    const markDownInput = markDownEditor.firstElementChild;
-    const markDownOutput = markDownEditor.lastElementChild;
-    const markDownHead = markDownSection.firstElementChild;
-    const markDownTablet = markDownSection.querySelector(
-      ".markDownPreviewTablet"
-    );
+  const width = window.innerWidth;
 
-    if (width >= 577 && width <= 768) {
+  const markDownInput = markDownEditor.firstElementChild;
+  const markDownOutput = markDownEditor.lastElementChild;
+  const markDownHead = markDownSection.firstElementChild;
+  const markDownTablet = markDownSection.querySelector(
+    ".markDownPreviewTablet"
+  );
 
-      markDownInput.addEventListener("input", (event) => {
-        markDownOutput.innerHTML = markDownToHTML(event.target.value);
-      });
-    }
-  });
+  if (width >= 577 && width <= 768) {
+    markDownInput.addEventListener("input", (event) => {
+      markDownOutput.innerHTML = markDownToHTML(event.target.value);
+    });
+  }
 };
