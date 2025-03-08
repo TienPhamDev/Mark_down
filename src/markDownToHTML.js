@@ -17,7 +17,6 @@ export const markDownToHTML = (markdown) => {
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;");
-    console.log(escapedContent);
     return `<code>${escapedContent}</code>`;
   });
   markdown = markdown.replace(
@@ -29,7 +28,6 @@ export const markDownToHTML = (markdown) => {
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;");
-      console.log(escapedContent);
       return `<pre class='codeBlock'><code>${escapedContent}</code></pre>`;
     }
   );
