@@ -453,9 +453,9 @@ article > h1 {
 
 /* screen size */
 @media (min-width: 577px) and (max-width: 768px) {
-  .markDownPreviewTablet {
+  /* .markDownPreviewTablet {
     display: flex;
-  }
+  } */
   .markDownPreview {
     display: none;
   }
