@@ -8,8 +8,9 @@ export const previewBtnTablet = (element) => {
 
   // test window screen size
   const width = window.innerWidth;
+  
   // state of screen, is it in tablet sreen or not
-  const isTablet = width >= 572 && width <= 768 ? true : false;
+  const isTablet = width >= 577 && width <= 768 ? true : false;
   
   // on click function
   const onClickBtn = () => {
