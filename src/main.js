@@ -95,7 +95,8 @@ saveMydocuments(document.querySelector(".saveBtn"));
 deleteMyDocuments(document.querySelector(".deleteBtn"));
 darkLightModeBtn(document.querySelector(".darkLightBtn"));
 previewBtn(document.querySelector(".previewBtn"));
-previewBtnTablet(document.querySelector("#previewBtnTablet"));
+previewBtn(document.querySelector("#previewBtnTablet"));
+// previewBtnTablet(document.querySelector("#previewBtnTablet"));
 screenResponsive(
   document.querySelector("#markDown"),
   document.querySelector("#markDownEditor")

@@ -1,33 +1,31 @@
 import { markDownToHTML } from "./markDownToHTML";
 export const screenResponsive = (markDownSection, markDownEditor) => {
-  const width = window.innerWidth;
-
-  const markDownInput = markDownEditor.firstElementChild;
-  const markDownOutput = markDownEditor.lastElementChild;
-  const markDownHead = markDownSection.firstElementChild;
-  const markDownTablet = markDownSection.querySelector(
-    ".markDownPreviewTablet"
+  const phoneSreen = window.matchMedia("(max-width: 426px)");
+  const tabletSreen = window.matchMedia(
+    "(min-width: 427px) and (max-width: 768px)"
   );
-  const mediaQuery = window.matchMedia("(max-width: 768px)");
+  const desktopScreen = window.matchMedia("(min-width: 769px)");
 
-  if (mediaQuery.matches) {
-    console.log("Screen size is less than or equal to 768px (Mobile view)");
-  }
+  const handleScreenSize = () => {
+    const markDownInput = markDownEditor.firstElementChild;
+    const markDownOutput = markDownEditor.lastElementChild;
+    const markDownHead = markDownSection.firstElementChild;
+    const markDownTablet = markDownSection.querySelector(
+      ".markDownPreviewTablet"
+    );
 
-  mediaQuery.addEventListener("change", (event) => {
-    if (event.matches) {
-      console.log("Switched to Mobile view");
-    } else {
-      console.log("Switched to Desktop view");
+    if (phoneSreen.matches) {
+      markDownTablet.style.display = "none";
+    } else if (tabletSreen.matches) {
+      markDownTablet.style.display = "flex";
+      markDownInput.addEventListener("input", (event) => {
+        markDownOutput.innerHTML = markDownToHTML(event.target.value);
+      });
     }
-  });
-  if(width < 577){
-    markDownTablet.classList.add("hidden")
-  }
-  if (width >= 577 && width <= 768) {
-    markDownTablet.classList.remove('hidden')
-    markDownInput.addEventListener("input", (event) => {
-      markDownOutput.innerHTML = markDownToHTML(event.target.value);
-    });
-  }
+  };
+
+  phoneSreen.addEventListener("change", handleScreenSize);
+  tabletSreen.addEventListener("change", handleScreenSize);
+
+  handleScreenSize();
 };
